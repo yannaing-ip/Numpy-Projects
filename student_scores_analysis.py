@@ -88,6 +88,33 @@ print("Maximum score per Subject\n", np.max(student_scores, axis=0))
 
 print("Minimun score per Subject\n", np.min(student_scores, axis=0))
 
+def top_students(scores, n = 10):
+    student_average_score = np.average(scores, axis=1)
+    idx = np.argsort(student_average_score)[::-1]
+
+    top_idx = idx[:n]
+
+    top_students = student_average_score[top_idx]
+
+    for rank, (i, score) in enumerate(zip(top_idx, top_students)):
+        print(f"Rank {rank+1} : Student {i+1}, Avg Score => {score}")
+
+def bottom_students(scores, n = 10):
+    student_average_score = np.average(scores, axis=1)
+    idx = np.argsort(student_average_score)
+
+    bottom_idx = idx[:n]
+
+    bottom_students = student_average_score[bottom_idx]
+    for rank, (i, score) in enumerate(zip(bottom_idx, bottom_students)):
+        print(f"Rank {rank+1} : Student {i+1}, Avg score => {score}")
+
+print("Top 10 Students")
+top_students(student_scores)
+print("Bottom 10 Students")
+bottom_students(student_scores)
+
+    
 
 
 
