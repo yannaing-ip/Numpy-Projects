@@ -72,6 +72,22 @@ print("Mean per student\n", np.mean(student_scores, axis = 1))
 
 print("Mean per Subject\n", np.mean(student_scores, axis = 0))
 
+print("Median per student\n", np.median(student_scores, axis = 1))
+
+print("Median per Subject\n", np.median(student_scores, axis = 0))
+
+print("Standard deviation per student\n", np.std(student_scores, axis=1))
+
+print("Standard deviation per Subject\n", np.std(student_scores, axis=0))
+
+print("Maximum score per student\n", np.max(student_scores, axis=1))
+
+print("Minimun score per student\n", np.min(student_scores, axis=1))
+
+print("Maximum score per Subject\n", np.max(student_scores, axis=0))
+
+print("Minimun score per Subject\n", np.min(student_scores, axis=0))
+
 
 
 
